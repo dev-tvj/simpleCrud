@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server
+    environment:
+      SA_PASSWORD: SuperSenhaPoderosa123
+      ACCEPT_EULA: 'Y'
+
+  dotnetcore:
+    image: mcr.microsoft.com/dotnet/sdk:6.0
+
+  angular:
+    image: node:14
+    command: sh -c "npm install -g @angular/cli && exec npm install"
