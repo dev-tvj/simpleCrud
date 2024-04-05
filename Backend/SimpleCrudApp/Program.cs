@@ -26,6 +26,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "SimpleCrudApp API V1");
+        c.RoutePrefix = string.Empty;
     });
 }
 
