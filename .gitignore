@@ -1,0 +1,45 @@
+# Ignore system-generated temporary files
+[Tt]humbs.db
+*.DS_Store
+
+# Ignore .NET build artifacts
+bin/
+obj/
+
+# Ignore Rider IDE files
+.idea/
+
+# Ignore Visual Studio IDE files
+.vs/
+
+# Ignore Visual Studio Code IDE files
+.vscode/
+
+# Ignore Node.js dependency files
+node_modules/
+
+# Ignore Angular build files
+/dist/
+
+# Ignore Docker configuration files
+.docker/
+
+# Ignore Docker cache files
+.dockerignore
+
+# Ignore Docker log files
+*.log
+
+# Ignore generated SQL files
+*.sql
+
+# Ignore environment files
+.env
+.env.*
+
+# Ignore build output files
+*.out
+
+# Ignore debug and log files
+debug.log
+log.log
