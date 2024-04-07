@@ -22,7 +22,7 @@ Certifique-se que possui instalado em seu computador as seguintes aplicações:
 2. Navegue até o diretório do projeto até a pasta `simpleCrud/Persistence`
 3. Execute na sequência os seguintes comandos:
     - `docker build -t sqlserver .`
-    - `docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=SenhaSuperPoderosa123" -p 1433:1433 --name sqlserver -d sqlserver`
+    - `docker run -e "ACCEPT_EULA=Y" -p 1433:1433 --name sqlserver -d sqlserver`
     - `docker start sqlserver`
     - `docker exec -dit sqlserver bash`
     - Agora seu SQL Server em seu container Docker está configurado, em execução e pronto para uso.
