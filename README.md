@@ -66,4 +66,41 @@ O CRUD disponivel no backend da aplicação manipula exclusivamente a tabela Ord
 Observação: Esse cenário é possível para essa aplicação pois se trata de um cenário de teste e demonstração de uso apenas.
 
 
+# Exemplos de Operações CRUD
+
+Para fazer as operações você pode usar algum software como o Postman ou Insomnia, porém também é possível utilizar o próprio Swagger da aplicação para isso, no seguinte endereço: `https://localhost:7227` .
+
+## PUT
+
+```json
+{
+  "id": 3,
+  "clientName": "Maria dos Santos",
+  "clientEmail": "mariadossantos@example.com",
+  "creationDate": "2024-04-08T00:13:41.453Z",
+  "paid": false
+}
+
+```
+## POST
+
+```json
+{
+  "id": 3,
+  "clientName": "Maria dos Santos",
+  "clientEmail": "mariadossantos@example.com",
+  "creationDate": "2024-04-08T00:13:41.453Z",
+  "paid": false
+}
+```
+
+## DELETE
+
+Estão disponíveis para serem deletadas imediatamente, sem restrição de relacionamento, as orders com IDs: **8, 9 e 10**.
+
+Para deletar as demais orders, existe restrição de chave estrangeira (REFERENCE constraint) no banco de dados. Isso ocorre ao tentar excluir um registro que possui relacionamentos com registros em uma ou mais tabelas. Essa restrição impede a exclusão de um registro na tabela pai (Orders) enquanto houver registros filhos associados a ele.
+
+É possível resolver tal conflito de relacionamento com CASCADE DELETE utilizando Fluent API ou Data Annotations, porém, tal complexidade não está no atual escopo do projeto.
+
+
 Este projeto está licenciado sob a [Licença MIT](LICENSE).
